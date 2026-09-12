@@ -8,6 +8,10 @@ run/main_scene="res://scenes/Menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameData="*res://scripts/GameData.gd"
+
 [display]
 
 window/size/viewport_width=720
