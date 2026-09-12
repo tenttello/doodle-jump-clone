@@ -1,0 +1,106 @@
+[gd_scene load_steps=2 format=3 uid="uid://menu1"]
+
+[ext_resource type="Script" path="res://scripts/Menu.gd" id="1_menu"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_menu")
+
+[node name="Bg" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08, 0.1, 0.16, 1)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_top = 180.0
+offset_right = 250.0
+offset_bottom = 280.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 48
+text = "DOODLE JUMP"
+horizontal_alignment = 1
+
+[node name="HighScoreLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 300.0
+offset_right = 200.0
+offset_bottom = 350.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 28
+text = "Рекорд: 0"
+horizontal_alignment = 1
+
+[node name="CoinsLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 350.0
+offset_right = 200.0
+offset_bottom = 400.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 28
+text = "Монеты: 0"
+horizontal_alignment = 1
+
+[node name="PlayBtn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_top = 500.0
+offset_right = 150.0
+offset_bottom = 590.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "ИГРАТЬ"
+
+[node name="ShopBtn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_top = 620.0
+offset_right = 150.0
+offset_bottom = 700.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 28
+text = "МАГАЗИН СКИНОВ"
+
+[node name="DonateBtn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_top = 730.0
+offset_right = 150.0
+offset_bottom = 800.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 26
+text = "ДОНАТ"
+
+[connection signal="pressed" from="PlayBtn" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="ShopBtn" to="." method="_on_shop_pressed"]
+[connection signal="pressed" from="DonateBtn" to="." method="_on_donate_pressed"]
